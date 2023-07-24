@@ -2,19 +2,15 @@
 #define CONTROL_LIB_H
 
 #include <stdbool.h>
-
-typedef bool DIN;
-typedef bool DOUT;
-typedef double AIN;
-typedef double AOUT;
+#include "scalerLib.h"
 
 // precondition check for cooling system startup
-bool system_precheck(DIN IN04, DIN IN05, AIN flowRateAct);
+bool system_precheck(DIN IN04, DIN IN05, AIN IN01);
 
 // pump speed control to maintain coolant temperature
-double pump_speed_control(double speedAct);
+double pump_speed_control(AIN IN01, double speedAct);
 
 // radiator speed control to maintain coolant temperature
-double radiator_fan_control(double tempAct);
+int radiator_fan_control(AIN IN02);
 
-#endif
+#endif // CONTROL_LIB_H
