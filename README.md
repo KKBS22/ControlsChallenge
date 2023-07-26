@@ -1,5 +1,19 @@
 # ControlsChallenge
 
+# Files
+```
+lib\
+  controlLib.c : Implementation for important control library function
+  controlLib.h : Function Definition file
+  scalerLib.c : Implemention of scaler function of Analog Inputs
+  scalerLib.h : Function Definition for the scalers
+  utility.h : Some important constants used for scaling
+
+test\
+  test_controlLib.c : Using cmocka to test the scaler and control library functions
+
+control.c : Simulation need to be implemenented based on various input conditions
+```
 
 # Usage 
 ```
